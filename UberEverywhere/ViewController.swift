@@ -13,13 +13,15 @@ class ViewController: UIViewController {
 
     var dateString :String!
     
-    
+
     @IBOutlet weak var myDatePicker: UIDatePicker!
     
     
     @IBOutlet weak var selectedDate: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        myDatePicker.hidden = false
+
      myDatePicker.addTarget(self, action: #selector(ViewController.datePickerValueChanged), forControlEvents: UIControlEvents.ValueChanged)    }
 
     func datePickerValueChanged (datePicker: UIDatePicker) {
@@ -39,17 +41,17 @@ class ViewController: UIViewController {
         
         
     }
-    
-    
     @IBAction func uberButtonisPressed() {
+    
+        myDatePicker.hidden = false
+
+    
+    }
+    
+    @IBAction func uberButtonisComplete() {
         
-        let calendar = NSCalendar.currentCalendar()
-        guard let alarmDate = calendar.dateByAddingUnit(.Second, value: 10, toDate: NSDate(), options: []) else {
-            fatalError("Unable to add date")
-            
-        }
-        
-        
+        myDatePicker.hidden = true
+
         
         [AZNotification .showNotificationWithTitle("Success your uber ride has been schueduled!", controller: self, notificationType: AZNotificationType.Success)]
         
@@ -58,9 +60,9 @@ class ViewController: UIViewController {
         notifaction.alertTitle = "Uber is here"
         notifaction.alertBody = dateString
         notifaction.alertAction = "Slide to see Uber Details"
-        notifaction.fireDate = alarmDate
+        notifaction.fireDate = myDatePicker.date
         notifaction.category = "rsvpCategory"
-        notifaction.userInfo = ["alarmDate":alarmDate]
+        notifaction.userInfo = ["alarmDate":myDatePicker.date]
         UIApplication.sharedApplication().scheduleLocalNotification(notifaction)
 
         print("skirtSkirt")

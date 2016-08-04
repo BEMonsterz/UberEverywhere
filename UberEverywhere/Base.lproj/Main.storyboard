@@ -42,6 +42,7 @@
                                     <color key="titleColor" red="0.95469356989999998" green="1" blue="0.90777801410000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="uberButtonisComplete" destination="BYZ-38-t0r" eventType="touchUpInside" id="WtA-rW-Bb0"/>
                                     <action selector="uberButtonisPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="qcs-Zg-Vzo"/>
                                 </connections>
                             </button>
