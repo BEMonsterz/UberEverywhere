@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     @NSCopying var timeZone: NSTimeZone?
 
     var dateString :String!
+    @IBOutlet weak var moreDate :UILabel!
     
 
     @IBOutlet weak var myDatePicker: UIDatePicker!
@@ -21,6 +22,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         myDatePicker.hidden = false
+        moreDate.hidden = true
+
 
      myDatePicker.addTarget(self, action: #selector(ViewController.datePickerValueChanged), forControlEvents: UIControlEvents.ValueChanged)    }
 
@@ -44,6 +47,7 @@ class ViewController: UIViewController {
     @IBAction func uberButtonisPressed() {
     
         myDatePicker.hidden = false
+        moreDate.hidden = true
 
     
     }
@@ -51,6 +55,7 @@ class ViewController: UIViewController {
     @IBAction func uberButtonisComplete() {
         
         myDatePicker.hidden = true
+        moreDate.hidden = false
 
         
         [AZNotification .showNotificationWithTitle("Success your uber ride has been schueduled!", controller: self, notificationType: AZNotificationType.Success)]
@@ -58,7 +63,7 @@ class ViewController: UIViewController {
         [AZNotificationType.Success]
         let notifaction = UILocalNotification()
         notifaction.alertTitle = "Uber is here"
-        notifaction.alertBody = dateString
+        notifaction.alertBody = "Ready to leave?"
         notifaction.alertAction = "Slide to see Uber Details"
         notifaction.fireDate = myDatePicker.date
         notifaction.category = "rsvpCategory"

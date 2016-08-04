@@ -58,6 +58,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let mainView = self.window?.rootViewController! as! ViewController
             mainView.selectedDate.hidden = false
 
+            mainView.moreDate.hidden = false
+
             
             
         }
