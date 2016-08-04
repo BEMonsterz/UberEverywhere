@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         yesAction.identifier = "yesAction"
         yesAction.authenticationRequired = true
         yesAction.destructive = false
-        yesAction.activationMode = .Background
+        yesAction.activationMode = .Foreground
         
         let noAction = UIMutableUserNotificationAction()
         noAction.title = "No"
@@ -57,6 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             let mainView = self.window?.rootViewController! as! ViewController
             mainView.selectedDate.hidden = false
+
             
             
         }

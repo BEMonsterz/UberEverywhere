@@ -23,20 +23,20 @@
                                     <!--2016-08-03 16:33:47 +0000-->
                                 </date>
                             </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXg-d0-GPo">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXg-d0-GPo">
                                 <rect key="frame" x="190" y="130" width="221" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="221" id="6mQ-5n-9G9"/>
+                                    <constraint firstAttribute="width" constant="221" id="FTF-7m-qp3"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iTd-d0-HDr">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iTd-d0-HDr">
                                 <rect key="frame" x="245" y="232" width="111" height="30"/>
                                 <color key="backgroundColor" red="0.38890224358974357" green="0.38890224358974357" blue="0.38890224358974357" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="111" id="ryz-3k-R2B"/>
+                                    <constraint firstAttribute="width" constant="111" id="36I-7r-B3x"/>
                                 </constraints>
                                 <state key="normal" title="Uber Button">
                                     <color key="titleColor" red="0.95469356989999998" green="1" blue="0.90777801410000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -49,13 +49,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="iTd-d0-HDr" firstAttribute="centerX" secondItem="3jm-3X-wgB" secondAttribute="centerX" id="D5O-Xe-h5P"/>
-                            <constraint firstItem="XXg-d0-GPo" firstAttribute="centerX" secondItem="iTd-d0-HDr" secondAttribute="centerX" id="QbQ-d6-xNV"/>
-                            <constraint firstItem="3jm-3X-wgB" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Wma-0S-KX1"/>
-                            <constraint firstItem="iTd-d0-HDr" firstAttribute="top" secondItem="XXg-d0-GPo" secondAttribute="bottom" constant="81" id="hoi-cs-3vr"/>
-                            <constraint firstItem="XXg-d0-GPo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="110" id="r4F-b7-f1e"/>
-                            <constraint firstAttribute="trailing" secondItem="3jm-3X-wgB" secondAttribute="trailing" id="tBZ-oc-GNa"/>
-                            <constraint firstItem="3jm-3X-wgB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="yxh-BC-FIA"/>
+                            <constraint firstItem="3jm-3X-wgB" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="DS6-Pk-dT0"/>
+                            <constraint firstAttribute="trailing" secondItem="3jm-3X-wgB" secondAttribute="trailing" id="Yhr-iH-GoL"/>
+                            <constraint firstItem="iTd-d0-HDr" firstAttribute="top" secondItem="XXg-d0-GPo" secondAttribute="bottom" constant="81" id="ePx-Xp-C2c"/>
+                            <constraint firstItem="XXg-d0-GPo" firstAttribute="centerX" secondItem="iTd-d0-HDr" secondAttribute="centerX" id="fMJ-qQ-9Et"/>
+                            <constraint firstItem="iTd-d0-HDr" firstAttribute="centerX" secondItem="3jm-3X-wgB" secondAttribute="centerX" id="g1Y-FI-cSM"/>
+                            <constraint firstItem="3jm-3X-wgB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vkG-50-Nct"/>
                         </constraints>
                     </view>
                     <connections>
